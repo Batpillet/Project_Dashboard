@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
 .App {
   text-align: center;
 }
@@ -16,15 +18,36 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+body {
+  font-family: 'Josefin Sans', cursive;
+}
 
 .App-link {
   color: #09d3ac;
 }
 
-.container-fluid{
-  padding: 0px; 
+#dash{
+  color: white !important; 
 }
 
-.container{
-  margin: 3%; 
+.card{
+  margin-top: 10px;
+  margin-left: -5px; 
+  margin-right: -5px;
+  padding: 10px; 
+  background: black;
+}
+
+.sidebar{
+  background-color: #32323E;
+}
+
+img{
+  width: 150px; 
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px; 
+  margin-bottom: 20px;
 }
