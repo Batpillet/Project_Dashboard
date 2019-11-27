@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import logo from './photos/profil.png'
 
+
 export default class ProfilSideBar extends Component {
+
     render() {
         return (
             <nav className="col-md-2 d-none d-md-block sidebar">

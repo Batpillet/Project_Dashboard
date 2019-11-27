@@ -58,7 +58,7 @@ export default class PieWidget extends Component {
     render() {
         return (
             <div className="card">
-                <h3 className="text-center">Objets connectés</h3>
+                <h5 className="card-title text-center">Nombre d'objets</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                     <PieChart width={730} height={250}>
                         <Pie data={data01} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={50} fill="#8884d8" />

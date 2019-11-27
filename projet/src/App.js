@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
 import './API';
-import Todo from './components/Todo.js';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
 import PieWidget from './components/PieWidget'
 import BarWidget from './components/BarWidget'
 import ProfilSideBar from './components/ProfilSideBar'
 import Header from './components/Header'
+import Objects from './components/Objects'
+import Users from './components/Users'
+import { Progress } from 'reactstrap'
+import Todo from './components/Todo'
+import TableWidget from './components/TableWidget'
 
 class App extends Component {
   constructor() {
@@ -15,7 +19,6 @@ class App extends Component {
       items: [],
       currentItem: { text: '', key: '' },
     }
-
   }
   handleInput = e => {
     console.log('Hello Input')
@@ -28,13 +31,52 @@ class App extends Component {
   render() {
     return (
       <body>
-        <Header/>
+        <Header />
         <div className="container-fluid">
           <div className="row">
             <ProfilSideBar />
             <main role="main" class="col-md-9 col-lg-10 px-4 ml-sm-auto">
               <div className="row">
-                <div className="col-12">
+                <div className="col-3">
+                  <Users />
+                </div>
+                <div className="col-3">
+                  <Objects />
+                </div>
+                <div className="col-6">
+                  <div className="card">
+                    <h5 className="card-title text-center">Progression</h5>
+                    <div className="card-body">
+                      <div className="row">
+                        <div className="col-3">
+                          <p className="align-middle">Casque</p>
+                        </div>
+                        <div className="col-9">
+                          <Progress value="25" />
+                        </div>
+                      </div>
+                      <div className="row">
+                        <div className="col-3">
+                          <p>Smartphone</p>
+                        </div>
+                        <div className="col-9">
+                          <Progress color="success" value={50} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-4">
+                  <PieWidget />
+                </div>
+                <div className="col-8">
+                  <BarWidget />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-3">
                   <div className="card">
                     <div className="card-body">
                       <Todo
@@ -46,13 +88,8 @@ class App extends Component {
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="row">
-                <div className="col-4">
-                  <PieWidget />
-                </div>
-                <div className="col-8">
-                  <BarWidget />
+                <div className="col-9">
+                  <TableWidget />
                 </div>
               </div>
             </main>

@@ -51,7 +51,7 @@ export default class BarWidget extends Component {
     render() {
         return (
             <div className="card">
-                <h3 className="text-center">Nombre d'utilisateurs par pays</h3>
+                <h5 className="card-title text-center">Nombre d'utilisateurs par pays</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                     <BarChart width={730} height={250} data={data}>
                         <CartesianGrid strokeDasharray="3 3" />
