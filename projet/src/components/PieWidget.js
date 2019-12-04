@@ -57,7 +57,7 @@ const data01 = [
 export default class PieWidget extends Component {
     render() {
         return (
-            <div className="card">
+            <div className="card shadow">
                 <h5 className="card-title text-center">Nombre d'objets</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                     <PieChart width={730} height={250}>

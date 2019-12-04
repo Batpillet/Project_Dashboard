@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 export default class Objects extends Component {
     render() {
         return (
-            <div className="card">
+            <div className="card shadow">
                 <h5 className="card-title text-center">Objets connectés</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                     <ul class="list-group list-group-flush">

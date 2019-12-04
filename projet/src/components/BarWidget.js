@@ -50,7 +50,7 @@ const data = [
 export default class BarWidget extends Component {
     render() {
         return (
-            <div className="card">
+            <div className="card shadow">
                 <h5 className="card-title text-center">Nombre d'utilisateurs par pays</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                     <BarChart width={730} height={250} data={data}>

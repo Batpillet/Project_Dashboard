@@ -8,9 +8,9 @@ import ProfilSideBar from './components/ProfilSideBar'
 import Header from './components/Header'
 import Objects from './components/Objects'
 import Users from './components/Users'
-import { Progress } from 'reactstrap'
 import Todo from './components/Todo'
 import TableWidget from './components/TableWidget'
+import ProgressBars from './components/Progress'
 
 class App extends Component {
   constructor() {
@@ -35,50 +35,38 @@ class App extends Component {
         <div className="container-fluid">
           <div className="row">
             <ProfilSideBar />
-            <main role="main" class="col-md-9 col-lg-10 px-4 ml-sm-auto">
+            <main role="main" class="col-xl-10 px-4 ml-sm-auto">
               <div className="row">
-                <div className="col-3">
-                  <Users />
-                </div>
-                <div className="col-3">
-                  <Objects />
-                </div>
-                <div className="col-6">
-                  <div className="card">
-                    <h5 className="card-title text-center">Progression</h5>
-                    <div className="card-body">
-                      <div className="row">
-                        <div className="col-3">
-                          <p className="align-middle">Casque</p>
-                        </div>
-                        <div className="col-9">
-                          <Progress value="25" />
-                        </div>
-                      </div>
-                      <div className="row">
-                        <div className="col-3">
-                          <p>Smartphone</p>
-                        </div>
-                        <div className="col-9">
-                          <Progress color="success" value={50} />
-                        </div>
-                      </div>
-                    </div>
+                <div className="col-12">
+                  <div className="border-bottom pt-3 pb-2">
+                    <h4 id="da">Dashboard</h4>
                   </div>
                 </div>
               </div>
               <div className="row">
-                <div className="col-4">
+                <div className="col-lg-3 col-md-6 col-sm-12 col-12">
+                  <Users />
+                </div>
+                <div className="col-lg-3 col-md-6 col-sm-12 col-12">
+                  <Objects />
+                </div>
+                <div className="col-lg-6 col-md-12 col-sm-12 col-12">
+                  <ProgressBars />
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-lg-4 col-md-6">
                   <PieWidget />
                 </div>
-                <div className="col-8">
+                <div className="col-lg-8 col-md-6">
                   <BarWidget />
                 </div>
               </div>
               <div className="row">
-                <div className="col-3">
-                  <div className="card">
+                <div className="col-lg-3 col-md-6 col-sm-12 col-12">
+                  <div className="card shadow">
                     <div className="card-body">
+                      <h5 className="card-title text-center">Todo List</h5>
                       <Todo
                         addItem={this.addItem}
                         inputElement={this.inputElement}
@@ -88,7 +76,7 @@ class App extends Component {
                     </div>
                   </div>
                 </div>
-                <div className="col-9">
+                <div className="col-lg-9 col-md-6 col-sm-12 col-12">
                   <TableWidget />
                 </div>
               </div>
