@@ -7,4 +7,3 @@ export default {
 };
 
 storiesOf('Progress', module).add('default', () => <Progress />)
-

@@ -16,12 +16,50 @@ import { BrowserRouter, Route, Link } from "react-router-dom";
 import NotFound from './NotFound'; 
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       items: [],
       currentItem: { text: '', key: '' },
-    }
+      user: [
+        {
+          id: 0, 
+          country: 'France', 
+          number: 3
+        },
+        {
+          id: 1, 
+          country: 'Espagne', 
+          number: 5
+        }
+      ], 
+      sensor: [
+        {
+          id: 0, 
+          creationDate: "04/12/19", 
+          location: "Salon"
+        }, 
+        {
+          id: 1, 
+          creationDate: "07/08/18", 
+          location: "Salle de bain"
+        }
+      ], 
+      measure: [
+        {
+          id: 0, 
+          type: "humidite", 
+          creationDate: "15/04/19", 
+          value: "10%"
+        }, 
+        {
+          id: 1, 
+          type: "temperature", 
+          creationDate: "15/09/17", 
+          value: "10°C"
+        }
+      ]
+    };
   }
   handleInput = e => {
     console.log('Hello Input')
@@ -37,7 +75,7 @@ class App extends Component {
         <Header nom="Formulaire" lien="/Formulaire"/>
         <div className="container-fluid">
           <div className="row">
-            <ProfilSideBar />
+            <ProfilSideBar infos={this.state.user[0]}/>
             <main role="main" class="col-xl-10 px-4 ml-sm-auto">
               <div className="row">
                 <div className="col-12">
@@ -48,13 +86,13 @@ class App extends Component {
               </div>
               <div className="row">
                 <div className="col-lg-3 col-md-6 col-sm-12 col-12">
-                  <Users />
+                  <Users nombre='5' pays='France'/>
                 </div>
                 <div className="col-lg-3 col-md-6 col-sm-12 col-12">
-                  <Objects />
+                  <Objects nombre='28' type='Humidité'/>
                 </div>
                 <div className="col-lg-6 col-md-12 col-sm-12 col-12">
-                  <ProgressBars />
+                  <ProgressBars value='95' type1='Humidité' type2='Temperature'/>
                 </div>
               </div>
               <div className="row">

@@ -8,14 +8,6 @@ import 'typeface-roboto';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NotFound from './NotFound'; 
 
-import { StoriesOf } from '@storybook/react'; 
-import { action } from '@storybook/addon-actions'; 
-import { linkTo } from '@storybook/addon-links'; 
-
-import { Header, Objects, PieWidget, ProfilSideBar, Progress, TableWidget, Todo, Users } from '@storybook/react/demo'; 
-
-storiesOf('Header', module).add('premier', () => <Header nom='hi'/>); 
-
 const Root = () =>(
     <BrowserRouter>
         <Switch>
