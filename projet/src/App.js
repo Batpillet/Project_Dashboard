@@ -11,6 +11,9 @@ import Users from './components/Users'
 import Todo from './components/Todo'
 import TableWidget from './components/TableWidget'
 import ProgressBars from './components/Progress'
+import Formulaire from './Formulaire'; 
+import { BrowserRouter, Route, Link } from "react-router-dom";
+import NotFound from './NotFound'; 
 
 class App extends Component {
   constructor() {
@@ -31,7 +34,7 @@ class App extends Component {
   render() {
     return (
       <body>
-        <Header />
+        <Header nom="Formulaire" lien="/Formulaire"/>
         <div className="container-fluid">
           <div className="row">
             <ProfilSideBar />
