@@ -15,7 +15,7 @@ export default class Form extends Component {
     
     render() {
         return (
-            <form className="form-horizontal" action="http://localhost:3030/sensor/add" method="post">
+            <form className="form-horizontal" action="http://localhost:3030/user" method="post">
                 <div className="form-group">
                     <label for="location">Localisation : </label>
                     <input type="text" className="form-control" id='location' name='location' required location={this.state.location} onChange={this.handlechange}></input>
