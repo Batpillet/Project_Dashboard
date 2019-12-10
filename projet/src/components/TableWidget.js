@@ -34,7 +34,7 @@ export default class TableWidget extends Component {
 
     render() {
         return (
-            <div className="card shadow">
+            <div className="card shadow mb-4">
                 <div className="card-body">
                     <div class="table-responsive">
                         <table class="table table-striped table-sm">

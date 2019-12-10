@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Progress from '../src/components/Progress'; 
 
 export default {
-  title: 'Progress',
+  title: 'Widget : barres de progression',
 };
 
 storiesOf('Progress', module).add('default', () => <Progress />)

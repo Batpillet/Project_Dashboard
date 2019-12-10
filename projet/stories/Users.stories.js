@@ -3,7 +3,7 @@ import { StoriesOf, storiesOf } from '@storybook/react';
 import Users from '../src/components/Users'; 
 
 export default {
-  title: 'Users',
+  title: 'Widget : Utilisateurs',
 };
 
 storiesOf('Users', module).add('default', () => <Users />)

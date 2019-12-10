@@ -7,11 +7,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-#bar{
-  width: 100%; 
-}
-
-.progress{
- font-size:2vw; 
-}

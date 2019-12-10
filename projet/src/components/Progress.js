@@ -7,7 +7,7 @@ export default class ProgressBars extends Component {
     }
     render() {
         return (
-            <div className="card shadow pb-4">
+            <div className="card shadow pb-4 firstRow">
                 <h5 className="card-title text-center">Progression</h5>
                 <div className="card-body">
                     <div className="row align-items-center">

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import TableWidget from '../src/components/TableWidget'; 
 
 export default {
-  title: 'TableWidget',
+  title: 'Widget : Tableau',
 };
 
 storiesOf('TableWidget', module).add('default', () => <TableWidget />)

@@ -16,12 +16,12 @@ export default class Users extends Component {
 
     render() {
         return (
-            <div className="card shadow">
+            <div className="card shadow firstRow">
                 <h5 className="card-title text-center">Utilisateurs</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Nombre : <p id="user_number"> </p></li>
-                        <li class="list-group-item">Pays preferé : <p id="user_country"> </p></li>
+                        <li class="list-group-item">Nombre : </li>
+                        <li class="list-group-item">Pays preferé : </li>
                     </ul>
                 </div>
             </div>

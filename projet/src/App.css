@@ -78,12 +78,17 @@ img{
   margin-bottom: 20px;
 }
 
-#progress{
-  width: 300px; 
-}
+.progress{
+  font-size:2vw; 
+ }
 
 @media (max-width: 150em) {
   ProfilSideBar {
     display: none;
   }
 }
+
+.firstRow{
+  height: 12rem;
+}
+

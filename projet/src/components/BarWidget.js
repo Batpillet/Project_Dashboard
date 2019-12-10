@@ -32,7 +32,7 @@ const data = [
 export default class BarWidget extends Component {
     render() {
         return (
-            <div className="card shadow">
+            <div className="card shadow secondRow">
                 <h5 className="card-title text-center">Nombre d'utilisateurs par pays</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                 <ResponsiveContainer width="99%" aspect={3}>

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import PieWidget from '../src/components/PieWidget'; 
 
 export default {
-  title: 'PieWidget',
+  title: 'Widget : Camembert',
 };
 
 storiesOf('PieWidget', module).add('default', () => <PieWidget />)

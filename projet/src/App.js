@@ -96,10 +96,10 @@ class App extends Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-lg-4 col-md-6">
+                <div className="col-lg-4 col-md-6 col-sm-12 col-12">
                   <PieWidget />
                 </div>
-                <div className="col-lg-8 col-md-6">
+                <div className="col-lg-8 col-md-6 col-sm-12 col-12">
                   <BarWidget />
                 </div>
               </div>

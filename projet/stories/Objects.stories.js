@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import Objects from '../src/components/Objects'; 
 
 export default {
-  title: 'Objects',
+  title: 'Widget : Objets connectés',
 };
 
 storiesOf('Objects', module).add('default', () => <Objects />)
