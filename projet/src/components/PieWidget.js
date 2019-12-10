@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Pie, PieChart, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
+import { Pie, PieChart, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer } from 'recharts';
 
   const data02 = [
     {
@@ -22,11 +22,13 @@ export default class PieWidget extends Component {
             <div className="card shadow">
                 <h5 className="card-title text-center">Nombre d'objets</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
+                <ResponsiveContainer width="99%" aspect={1.33}>
                     <PieChart width={730} height={250}>
                         <Pie data={data02} dataKey="value" nameKey="name" outerRadius={80} fill="#82ca7d" label/>
                     </PieChart>
+                    </ResponsiveContainer>
                 </div>
             </div>
-        )
+        ) 
     }
 }

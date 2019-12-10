@@ -8,7 +8,6 @@ import ProfilSideBar from './components/ProfilSideBar'
 import Header from './components/Header'
 import Objects from './components/Objects'
 import Users from './components/Users'
-import Todo from './components/Todo'
 import TableWidget from './components/TableWidget'
 import ProgressBars from './components/Progress'
 import Formulaire from './Formulaire'; 
@@ -104,20 +103,7 @@ class App extends Component {
                 </div>
               </div>
               <div className="row">
-                <div className="col-lg-3 col-md-6 col-sm-12 col-12">
-                  <div className="card shadow">
-                    <div className="card-body">
-                      <h5 className="card-title text-center">Todo List</h5>
-                      <Todo
-                        addItem={this.addItem}
-                        inputElement={this.inputElement}
-                        handleInput={this.handleInput}
-                        currentItem={this.state.currentItem}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-9 col-md-6 col-sm-12 col-12">
+                <div className="col-lg-12 col-md-12 col-sm-12 col-12">
                   <TableWidget />
                 </div>
               </div>

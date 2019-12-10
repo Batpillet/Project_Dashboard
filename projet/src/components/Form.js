@@ -16,6 +16,7 @@ export default class Form extends Component {
                     <label for="location">Dans quelle pièce de la maison ? : </label>
                     <input type="Location" className="form-control" id="Location"></input>
                 </div>
+                <button type="submit" class="btn btn-primary">Valider</button>
             </form>
         )
     }

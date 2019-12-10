@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Pie, PieChart, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar } from 'recharts';
+import { Pie, PieChart, BarChart, CartesianGrid, XAxis, YAxis, Tooltip, Legend, Bar, ResponsiveContainer } from 'recharts';
 
 const data = [
     {
@@ -35,6 +35,7 @@ export default class BarWidget extends Component {
             <div className="card shadow">
                 <h5 className="card-title text-center">Nombre d'utilisateurs par pays</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
+                <ResponsiveContainer width="99%" aspect={3}>
                     <BarChart width={730} height={250} data={data}>
                         <CartesianGrid strokeDasharray="3 3" />
                         <XAxis dataKey="name" />
@@ -42,6 +43,7 @@ export default class BarWidget extends Component {
                         <Tooltip />
                         <Bar dataKey="uv" fill="#8884d8" />
                     </BarChart>
+                  </ResponsiveContainer>
                 </div>
             </div>
         )
