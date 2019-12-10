@@ -1,25 +1,37 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class TableWidget extends Component {
     constructor(props) {
         super(props)
         this.state = {
             sensors: [
-                { id: 0, date: "09/12/19", userId: 2, location: "salon" },
-                { id: 1, date: "09/07/19", userId: 2, location: "chambre" }
+                // { id: 0, date: "09/12/19", userId: 2, location: "salon" },
+                // { id: 1, date: "09/07/19", userId: 2, location: "chambre" }
+                {
+                    
+                }
             ]
         }
     }
 
+    componentDidMount(){
+        axios.get('http://localhost:3030/sensor')
+        .then(response => {
+            this.setState({sensors : response.data});
+            console.log(this.state.sensors);
+        });
+    }
+
     renderTableData() {
         return this.state.sensors.map((sensor, index) => {
-            const { id, date, userId, location } = sensor
+            const { _id, creationDate, location, userID } = sensor
             return (
-                <tr key={id}>
-                    <td>{id}</td>
-                    <td>{date}</td>
-                    <td>{userId}</td>
+                <tr key={_id}>
+                    <td>{_id}</td>
+                    <td>{creationDate}</td>
                     <td>{location}</td>
+                    <td>{userID}</td>
                 </tr>
             )
         })
