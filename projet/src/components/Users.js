@@ -1,18 +1,22 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class Users extends Component {
 
     constructor(props) {
         super(props)
+        this.state = {
+            listUser : []
+        }
     }
 
-    componentDidMount() {
-        fetch('http://localhost:3030/users/5ddb94c6fc13ae640c000014')
-          .then(response => response.json())
-          .then(data => this.setState({ data }));
-          console.log(`this is location ${this.data}, this is number of people in here ${this.data}`)
-
-      }
+    componentDidMount(){
+        axios.get('http://localhost:3030/users/5ddb94c6fc13ae640c000014')
+        .then(response => {
+            this.setState({listUser : response.data});
+            console.log(this.state.listUser);
+        });
+    }
 
     render() {
         return (
@@ -20,8 +24,8 @@ export default class Users extends Component {
                 <h5 className="card-title text-center">Utilisateurs</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Nombre : <p id="user_number"> </p></li>
-                        <li class="list-group-item">Pays preferé : <p id="user_country"> </p></li>
+                        <li class="list-group-item">Nombre : <p> {this.state.listUser.personsInHouse} </p></li>
+                        <li class="list-group-item">Pays preferé : <p> {this.state.listUser.location} </p></li>
                     </ul>
                 </div>
             </div>
