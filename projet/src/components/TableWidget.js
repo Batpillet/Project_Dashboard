@@ -36,8 +36,8 @@ export default class TableWidget extends Component {
         return (
             <div className="card shadow mb-4">
                 <div className="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-sm">
+                    <div class="table-responsive table-wrapper-scroll-y my-custom-scrollbar">
+                        <table class="table table-bordered table-striped table-sm mb-0">
                             <thead>
                                 <tr>
                                     {this.renderTableHeader()}
