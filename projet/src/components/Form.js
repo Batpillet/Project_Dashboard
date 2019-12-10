@@ -1,12 +1,23 @@
 import React, { Component } from 'react'
 
 export default class Form extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {location: '', personsInHouse: '', houseSize: ''};
+    
+        this.handleChange = this.handleChange.bind(this);
+    }
+    handleChange(event) {
+        this.setState({location: event.target.location});
+        this.setState({personsInHouse: event.target.personsInHouse});
+        this.setState({houseSize: event.target.houseSize});
+
     render() {
         return (
             <form className="form-horizontal" action="http://localhost:3030/sensor/add" method="post">
                 <div className="form-group">
-                    <label for="Localisation">Localisation : </label>
-                    <input type="text" className="form-control" id='location' name='location' required></input>
+                    <label for="location">Localisation : </label>
+                    <input type="text" className="form-control" id='location' name='location' required location={this.state.location} onChange={this.handlechange}></input>
                 </div>
                 <div className='form-group'>
                     <label for='Number'>Nombre de personnes dans la maison : </label>
