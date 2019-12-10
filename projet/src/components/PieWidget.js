@@ -25,8 +25,9 @@ export default class PieWidget extends Component {
                 <ResponsiveContainer width="99%" aspect={1.33}>
                     <PieChart width={730} height={250}>
                         <Pie data={data02} dataKey="value" nameKey="name" outerRadius={80} fill="#82ca7d" label/>
+                        <Tooltip />
                     </PieChart>
-                    </ResponsiveContainer>
+                </ResponsiveContainer>
                 </div>
             </div>
         ) 
