@@ -11,7 +11,8 @@ export default class Form extends Component {
         this.setState({location: event.target.location});
         this.setState({personsInHouse: event.target.personsInHouse});
         this.setState({houseSize: event.target.houseSize});
-
+    }
+    
     render() {
         return (
             <form className="form-horizontal" action="http://localhost:3030/sensor/add" method="post">

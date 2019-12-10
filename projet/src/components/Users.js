@@ -24,13 +24,8 @@ export default class Users extends Component {
                 <h5 className="card-title text-center">Utilisateurs</h5>
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                     <ul class="list-group list-group-flush">
-<<<<<<< HEAD
-                        <li class="list-group-item">Nombre : </li>
-                        <li class="list-group-item">Pays preferé : </li>
-=======
                         <li class="list-group-item">Nombre : <p> {this.state.listUser.personsInHouse} </p></li>
                         <li class="list-group-item">Pays preferé : <p> {this.state.listUser.location} </p></li>
->>>>>>> DataLink
                     </ul>
                 </div>
             </div>

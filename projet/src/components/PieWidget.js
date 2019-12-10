@@ -22,7 +22,11 @@ export default class PieWidget extends Component {
     super(props)
     this.state = {
         listSensor : [],
-        dataPie : []
+        dataPie : [
+          {
+            
+          }
+        ]
     }
 
 
@@ -32,30 +36,30 @@ export default class PieWidget extends Component {
 componentDidMount(){
     axios.get('http://localhost:3030/measures/Humi')
     .then(response => {
-      var myData = [];
-        for(var x in response.data){
-        myData.push({name: 'Maisons avec '+ x + ' habitants', value: response.data[x]})
-      }  
-      this.setState({dataPie : {0 : response.data}});
-        console.log(this.state.dataPie);
+      this.setState({
+        dataPie: [
+          ...this.state.dataPie,
+          { name: "Humidity", value: response.data.numHumidity}
+        ]
+      });
     });
-    axios.get('http://localhost:3030/measures/Temp')
+    axios.get('http://localhost:3030/measures/Temp') 
     .then(response => {
-      var myData = [];
-        for(var x in response.data){
-        myData.push({name: 'Maisons avec '+ x + ' habitants', value: response.data[x]})
-      }  
-      this.setState({dataPie : {1 : response.data}});
-        console.log(this.state.dataPie);
+      this.setState({
+        dataPie: [
+          ...this.state.dataPie,
+          { name: "Temperature", value: response.data.numTemperature}
+        ]
+      });
     });
     axios.get('http://localhost:3030/measures/AirP')
     .then(response => {
-      var myData = [];
-        for(var x in response.data){
-        myData.push({name: 'Maisons avec '+ x + ' habitants', value: response.data[x]})
-      }
-      this.setState({dataPie : {2 : response.data}});
-        console.log(this.state.dataPie);
+      this.setState({
+        dataPie: [
+          ...this.state.dataPie,
+          { name: "Air Pollution", value: response.data.numAirP}
+        ]
+      });
     });
 
     axios.get('http://localhost:3000/users/personsInHouse')
@@ -75,11 +79,7 @@ componentDidMount(){
                 <div className="card-body" style={{ display: 'inline-flex', justifyContent: 'center' }}>
                 <ResponsiveContainer width="100%" aspect={1.33}>
                     <PieChart width={730} height={250}>
-<<<<<<< HEAD
-                        <Pie data={data02} dataKey="value" nameKey="name" fill="#82ca7d" label/>
-=======
                         <Pie data={this.state.dataPie} dataKey="value" nameKey="name" outerRadius={80} fill="#82ca7d" label/>
->>>>>>> DataLink
                         <Tooltip />
                     </PieChart>
                 </ResponsiveContainer>
