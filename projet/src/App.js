@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import './API';
+import './API/API_Weather.js';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import PieWidget from './components/PieWidget'
 import BarWidget from './components/BarWidget'
@@ -13,6 +13,7 @@ import ProgressBars from './components/Progress'
 import Formulaire from './Formulaire'; 
 import { BrowserRouter, Route, Link } from "react-router-dom";
 import NotFound from './NotFound'; 
+import axios from 'axios';
 
 class App extends Component {
   constructor(props) {
@@ -70,7 +71,7 @@ class App extends Component {
 
   render() {
     return (
-      <body>
+      <body onload ='start()'>
         <Header nom="Formulaire" lien="/Formulaire"/>
         <div className="container-fluid">
           <div className="row">
