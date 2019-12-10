@@ -11,7 +11,7 @@ export default class Users extends Component {
     }
 
     componentDidMount(){
-        axios.get('http://localhost:3030/users/5ddb94c6fc13ae640c000014')
+        axios.get('http://localhost:3030/user/5ddb94c6fc13ae640c000014')
         .then(response => {
             this.setState({listUser : response.data});
             console.log(this.state.listUser);
